@@ -21,7 +21,8 @@ class App extends Component {
             <Container>
             <Menu items={items} title="Main menu" />
             Hello word!
-            <Menu items={items1} title="Another menu" />
+            <Menu items={items1} title="Just another menu" />
+            
             </Container>
             </div>
         )

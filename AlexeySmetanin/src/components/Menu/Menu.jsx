@@ -2,7 +2,26 @@ import './Menu.css';
 
 import React, { Component, Fragment } from 'react';
 
+
+
+import PropTypes from 'prop-types';
+
 export default class Menu extends Component {
+    static propTypes = {
+        title: PropTypes.string,
+        items: PropTypes.arrayOf(
+            PropTypes.shape({
+                title: PropTypes.string.isRequired,
+                href: PropTypes.string.isRequired,
+            })
+        )
+    }
+
+    static defaultProps = {
+        title: 'Default menu title',
+        items: [],
+    }
+ 
     render() {
        // console.log('props', this.props);
         const {title, items} = this.props;
