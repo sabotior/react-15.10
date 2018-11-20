@@ -6,6 +6,7 @@ import React, { Component, Fragment } from 'react';
 
 import PropTypes from 'prop-types';
 
+//statefull
 export default class Menu extends Component {
     static propTypes = {
         title: PropTypes.string,
@@ -29,7 +30,7 @@ export default class Menu extends Component {
             <Fragment>
                 <h3>{title}</h3>
             <ul className="menu">
-                {items.map((item) => <li><a href={item.href}>{item.title}</a></li>)}
+                {items.map((item, idx) => <li key={idx}><a href={item.href}>{item.title}</a></li>)}
             </ul>
             </Fragment>
         )

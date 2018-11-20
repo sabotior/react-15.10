@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import ReactDom from 'react-dom';
 import Menu from './components/Menu';
 import Container from './components/Container';
+import List from './components/List';
+import Counter from './components/Counter';
 
 const items = [
     { href: '/', title: 'Home' },
@@ -22,7 +24,8 @@ class App extends Component {
             <Menu items={items} title="Main menu" />
             Hello word!
             <Menu items={items1} title="Just another menu" />
-            
+            <List items={['MongoDB', 'RethinkDB', 'MySQL']} />
+            <Counter />
             </Container>
             </div>
         )
